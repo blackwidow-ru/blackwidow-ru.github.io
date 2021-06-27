@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /*@import url('768.css') (min-width: 768px);*/
-*{
+* {
     box-sizing: border-box;
 }
+
 html {
     font-size: 62.5%;
 }
@@ -77,6 +78,27 @@ img {
     margin: 0 1rem;
     border-radius: 2rem;
     border: 1px transparent solid;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 3rem;
+    line-height: 2.8rem;
+    letter-spacing: .1rem;
+    max-width: 70ex;
+    text-align: justify;
+}
+
+strong {
+    font-weight: 900;
+}
+
+footer {
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: .5rem .5rem 0 0;
+    padding: 2rem;
 }
 
 @media (min-width: 768px) {
