@@ -10,11 +10,87 @@ html {
     font-size: 62.5%;
 }
 
+header {
+    display: grid;
+    flex-direction: row;
+    background: black;
+    color: white;
+
+    grid-template-areas:
+            "logo title ";
+    grid-template-columns: 1fr 5fr;
+    border-radius: 0 0 .5rem .5rem;
+    margin-bottom: 0.5rem;
+}
+
+h1.header-title {
+    grid-area: title;
+}
+
+span.logo {
+    font-size: 5rem;
+    /*border: white 1px solid;*/
+    /*border-radius: 50%;*/
+    margin: auto 0rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    grid-area: logo;
+}
+
+span.logo a,
+span.logo a:link,
+span.logo a:visited,
+span.logo a:hover,
+span.logo a:focus,
+span.logo a:active {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+span.logo a:hover {
+    color: #e1e1e1;
+}
+
+span.logo a:active {
+    color: #a9a9a9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+
+    font-size: 2rem;
+    background: #333;
+}
+
+nav > span:first-child {
+    margin-left: 2rem;
+}
+nav span{
+    border-right: #e1e1e1 solid 2px;
+    border-left: #e1e1e1 solid 2px;
+    padding: 1rem 1rem;
+}
+
+nav a,
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:focus,
+nav a:active {
+    text-decoration: none;
+    color: white;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: transparent;
     color: black;
-    font-size: 2rem;
+    font-size: 1.6rem;
     display: block;
 }
 
@@ -22,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
     background: black;
     color: white;
     padding: 2rem 0;
-    margin: 1rem 0 2rem;
+    margin: .5rem 0 2rem;
     text-align: center;
 }
 
@@ -47,9 +123,9 @@ span.title {
     font-weight: 900;
 }
 
-.item {
-    min-height: 100px;
-    border: 1px red dotted;
+article {
+    max-width: 95vw;
+    margin: 1rem auto;
 }
 
 p {
@@ -61,24 +137,29 @@ p {
     text-align: justify;
 }
 
-figcaption {
-    font-size: 1rem;
-    margin: .5rem;
-    padding: .5rem;
-    line-height: 1.2rem;
+figure {
+    max-width: 90vw;
+    display: block;
+    margin: 0 auto;
 }
 
-span {
-    display: block;
+figcaption {
+    font-size: 1rem;
+    padding: .5rem;
+    line-height: 1.2rem;
 }
 
 img {
     max-height: 90vh;
     max-width: 90vw;
-    margin: 0 1rem;
     border-radius: 2rem;
     border: 1px transparent solid;
 }
+
+span {
+    /*display: block;*/
+}
+
 
 ul {
     list-style-type: disc;
@@ -113,6 +194,7 @@ footer {
         flex-direction: row;
         align-content: space-evenly;
         margin: 0 auto;
+        gap: 3rem;
     }
 
     img {
